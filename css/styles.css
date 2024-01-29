@@ -1,0 +1,66 @@
+/*
+COLOR PALETTE
+
+Light gray pink rgb(236, 229, 232)
+Gray #312a1d
+Turquoise  rgb(82, 214, 232);
+Pink rgb(232, 82, 139);
+White text aliceblue
+*/
+
+/* GLOBAL STYLES
+----------------------------------------*/
+body {
+  background: rgb(236, 229, 232);
+}
+
+/*links */
+a {
+  color: rgb(82, 214, 232);
+  text-decoration: none;
+}
+a:hover {
+  color:  rgb(232, 82, 139);
+}
+p a {
+  color:rgb(232, 82, 139);
+}
+p a:hover {
+  color: rgb(82, 214, 232);
+}
+.btn {
+  background:rgb(232, 82, 139);
+}
+
+/* HOME
+----------------------------------------*/
+
+/* RESUME
+----------------------------------------*/
+.resume {
+  background: url(../images/annie-spratt-unsplash.jpg) no-repeat;
+  background-size: cover;
+}
+.resume .content-wrapper {
+  background: rgb(225 225 225 / 0.9);
+}
+
+/* Profile
+----------------------------------------*/
+
+/* Projects
+----------------------------------------*/
+
+/* Work Experience
+----------------------------------------*/
+
+/* Education
+----------------------------------------*/
+
+
+/* FOOTER
+----------------------------------------*/
+footer {
+  background:#312a1d;
+  color:aliceblue;
+}
