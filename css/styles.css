@@ -10,8 +10,22 @@ White text aliceblue
 
 /* GLOBAL STYLES
 ----------------------------------------*/
+/* 
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  height: 100%;
+}
 body {
   background: rgb(236, 229, 232);
+  margin: 0;
 }
 
 /*links */
@@ -32,17 +46,42 @@ p a:hover {
   background:rgb(232, 82, 139);
 }
 
-/* HOME
-----------------------------------------*/
+.content-wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  max-width: 1100px;
+}
 
 /* RESUME
 ----------------------------------------*/
+.resume header::before {
+  background: url(../images/bg-home-office-studio.jpg) center;
+  background-size: cover;
+  content: "";
+  display: block;
+  height: 375px;
+}
 .resume {
   background: url(../images/annie-spratt-unsplash.jpg) no-repeat;
-  background-size: cover;
+  background-size: fill;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
 }
 .resume .content-wrapper {
   background: rgb(225 225 225 / 0.9);
+  flex: 1 0 auto;
+}
+.resume-section {
+  margin-bottom: 50px;
+}
+.resume-section h2 {
+  border-bottom: 2px dashed #312a1d;
+}
+.download-link {
+  position: fixed;
+  top: 5px;
+  left: 5px;
 }
 
 /* Profile
@@ -50,9 +89,23 @@ p a:hover {
 
 /* Projects
 ----------------------------------------*/
+.project-item {
+  display: flow-root;
+  margin: 30px 0;
+
+}.project-item img {
+  width: 600px;
+  float: left;
+  margin-right: 20px;
+}
 
 /* Work Experience
 ----------------------------------------*/
+.work-items {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 20px;
+}
 
 /* Education
 ----------------------------------------*/
@@ -63,4 +116,21 @@ p a:hover {
 footer {
   background:#312a1d;
   color:aliceblue;
+  justify-content: space-between;
+  padding: 0 50px;
+  display: flex;
+}
+.socials {
+  list-style-type: none;
+  padding: 0;
+}
+.socials li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.socials img {
+  width: 32px;
+}
+.socials img:hover {
+  opacity: 0.5;
 }
